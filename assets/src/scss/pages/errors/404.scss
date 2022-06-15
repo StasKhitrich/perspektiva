@@ -1,0 +1,35 @@
+@import "../../parts/mixins";
+
+#content {
+  justify-content: center;
+}
+
+.section-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  h2 {
+    max-width: 800px;
+    margin-bottom: 44px;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 65px;
+    text-align: center;
+  }
+
+  p {
+    max-width: 800px;
+    margin-bottom: 24px;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    margin: 0 auto;
+  }
+}

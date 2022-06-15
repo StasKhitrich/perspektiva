@@ -1,0 +1,10 @@
+@import "../../../parts/mixins";
+
+section.section-example {
+  h2 {
+    color: red;
+  }
+
+  @include media($mobile_w) {
+  }
+}

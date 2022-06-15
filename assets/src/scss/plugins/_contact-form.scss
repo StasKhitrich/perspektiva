@@ -1,0 +1,77 @@
+@import "../parts/mixins";
+@import "../parts/colors";
+
+.ajax-loader {
+  display: none !important;
+}
+
+.wpcf7-response-output, .wpcf7-not-valid-tip {
+  display: none !important;
+}
+
+.wpcf7-not-valid {
+  border: solid 1px red !important;
+}
+
+.cf7-thank-you {
+  padding: 44px 0;
+
+  h4 {
+    margin: 0 auto 24px auto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 auto 16px auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  button {
+    margin: 0 auto;
+  }
+
+}
+
+.cf7-thank-you-light {
+  h4, p {
+    color: #000 !important;
+  }
+}
+
+.cf7-thank-you-dark {
+  h4, p {
+    color: #111 !important;
+  }
+}
+
+.modal {
+  .cf7-thank-you {
+    padding: 0;
+
+    h4 {
+      max-width: 88%;
+      margin: 0 0 24px 0;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 25px;
+      text-align: left;
+      text-transform: none;
+      color: #111;
+    }
+
+    p {
+      margin: 0 0 16px 0;
+      text-align: left;
+      font-size: 14px;
+      line-height: 17px;
+      color: #111;
+    }
+  }
+}
