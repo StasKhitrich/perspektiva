@@ -9,11 +9,6 @@
     "webpack:watch": "webpack --watch --progress --mode development"
   },
   "keywords": [],
-  "author": {
-    "name": "Stas Khitrich",
-    "email": "oopsnovik@gmail.com",
-    "url": "https://vk.com/Snova_s_vami"
-  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.6",
