@@ -1,0 +1,1 @@
+import 'SCSS/pages/gallery/gallery.scss';

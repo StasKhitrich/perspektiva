@@ -1,1 +1,0 @@
-import 'SCSS/pages/about/about.scss';
