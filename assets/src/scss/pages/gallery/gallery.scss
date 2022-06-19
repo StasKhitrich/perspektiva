@@ -3,82 +3,77 @@
 @import '../../parts/mixins';
 @import '../../parts/flex';
 
-.header {
-    @include violetSection;
-    padding: 20px 0;
+$slider_max_width: 700px;
 
-    .menu li a {
-        color: $light;
-    }
+.header {
+  @include violetSection;
+  padding: 20px 0;
+
+  .menu li a {
+    color: $light;
+  }
 }
 
 .section-intro {
-    @include link-social(-8px, 35px, 33px);
-    @include violetSection;
-    padding-top: 50px;
+  @include link-social(-8px, 35px, 33px);
+  @include violetSection;
+  padding: 50px 0;
 
-    .wrapper {
-        @include row;
-        align-items: center;
-        max-width: 800px;
-        margin: 0 auto;
+  .wrapper {
+    @include row;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 
-        .text{
-            max-width: 350px;
-            width: 100%;
-        }
-
-        .pic-gallery {
-            max-width: 350px;
-            width: 100%;
-            max-height: 570px;
-            overflow: hidden;
-
-            @media (max-width: 768px){
-                display: none;
-            }
-
-            & img {
-                width: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
+    .text {
+      max-width: 350px;
+      width: 100%;
     }
+
+    .pic-gallery {
+      max-width: 350px;
+      width: 100%;
+      max-height: 570px;
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      & img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
 }
 
-.section-gallery{
-    .wrapper{
-        @include row;
-        justify-content: center;
+.section-gallery {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 50px 15px;
+
+  &__slider {
+    margin-bottom: 24px;
+    max-width: $slider_max_width;
+
+    img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
     }
-    &__inner{
-        margin: 15px;
+  }
 
-        @media (max-width: 768px){
-            margin: 5px;
-        }
-        .photo-medium{
-            @include photoGallery(350px, 350px);
-        }
-        .photo-big{
-            @include photoGallery(350px, 460px);
-        }
-        .photo-smoll{
-            @include photoGallery(350px, 230px);
-        }
-        .photo-medium-big{
-            @include photoGallery(350px, 400px);
-        }
-        .photo-extralarge{
-            @include photoGallery(350px, 520px);
-        }
+  &__slider-nav {
+    max-width: $slider_max_width;
 
-        & img{
-            object-fit: cover;
-            object-position: center;
-            width: 100%;
-        }
-
+    img {
+      object-fit: cover;
+      height: 100px;
+      width: 100%;
     }
+  }
 }
