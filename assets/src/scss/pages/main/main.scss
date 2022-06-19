@@ -536,6 +536,7 @@
   .wrapper {
     @include row;
     justify-content: center;
+    flex-wrap: wrap;
     border-bottom: 1px solid $violet;
     height: 100%;
     padding: 50px 0;

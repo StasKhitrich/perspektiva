@@ -61,33 +61,46 @@ body {
 }
 
 .menu {
-  a {
-    @include link($violet-dark, 13pt, 1);
-    margin-right: 10px;
+  display: flex;
 
-    @media (max-width: 1024px) {
-      font-size: ($Fzparagraph - 2);
+  li {
+    list-style: none;
+
+    a {
+      @include link($violet-dark, 13pt, 1);
+      margin-right: 10px;
+
+      @media (max-width: 1024px) {
+        font-size: ($Fzparagraph - 2);
+      }
+
+      @media (max-width: 768px) {
+        max-width: 320px;
+      }
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        background: $violet-light4;
+        width: 100%;
+        height: 7px;
+        transform: scaleX(0);
+        z-index: -1;
+        transition: $slow-speed;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+        transition: $slow-speed;
+      }
     }
 
-    @media (max-width: 768px) {
-      max-width: 320px;
-    }
-
-    &::before {
-      position: absolute;
-      bottom: 0;
-      content: "";
-      background: $violet-light4;
-      width: 100%;
-      height: 7px;
-      transform: scaleX(0);
-      z-index: -1;
-      transition: $slow-speed;
-    }
-
-    &:hover::before {
-      transform: scaleX(1);
-      transition: $slow-speed;
+    &.current_page_item:not(.hash) {
+      a::before {
+        transform: scaleX(1);
+        transition: $slow-speed;
+      }
     }
   }
 
@@ -111,16 +124,30 @@ footer {
     }
 
     &__menu {
-      a {
-        position: relative;
-        font-size: 11pt;
-        margin: 0 10px;
-        transition: $fast-speed;
+      display: flex;
 
-        &:hover {
-          text-decoration: underline;
+      li {
+        list-style: none;
+
+        a {
+          position: relative;
+          font-size: 11pt;
+          margin: 0 10px;
           transition: $fast-speed;
-          opacity: 1;
+
+          &:hover {
+            text-decoration: underline;
+            transition: $fast-speed;
+            opacity: 1;
+          }
+        }
+
+        &.current_page_item:not(.hash) {
+          a {
+            text-decoration: underline;
+            transition: $fast-speed;
+            opacity: 1;
+          }
         }
       }
 

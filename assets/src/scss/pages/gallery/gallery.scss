@@ -3,9 +3,13 @@
 @import '../../parts/mixins';
 @import '../../parts/flex';
 
-.header{
+.header {
     @include violetSection;
     padding: 20px 0;
+
+    .menu li a {
+        color: $light;
+    }
 }
 
 .section-intro {
