@@ -4,6 +4,7 @@
 @import '../../parts/flex';
 
 $slider_max_width: 700px;
+$slider_min_width: 300px;
 
 .header {
   @include violetSection;
@@ -59,6 +60,7 @@ $slider_max_width: 700px;
   &__slider {
     margin-bottom: 24px;
     max-width: $slider_max_width;
+    min-width: $$slider_min_width:;
 
     img {
       width: 100%;
@@ -69,6 +71,7 @@ $slider_max_width: 700px;
 
   &__slider-nav {
     max-width: $slider_max_width;
+    min-width: $$slider_min_width:;
 
     img {
       object-fit: cover;
