@@ -13,6 +13,11 @@
     align-items: center;
     opacity: $Opaciti;
 
+      ul{
+          @include row;
+          flex-wrap: wrap;
+      }
+
     & p {
       font-size: 11pt;
     }
